@@ -11,10 +11,8 @@
 package com.epam.course.services;
 
 
-public class CourseService
-{
-	public String getHello()
-	{
-		return "Hello";
-	}
+public class CourseService {
+    public String getHello() {
+        return "Hello";
+    }
 }

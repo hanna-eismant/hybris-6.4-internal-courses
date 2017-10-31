@@ -1,0 +1,16 @@
+<action-definition
+    id="com.epam.course.actions.ShowUserInfoAction"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/action-definition.xsd">
+
+    <name>Show User Info</name>
+    <description>Show main user information</description>
+    <author>Hanna</author>
+    <version>0.1</version>
+
+    <actionClassName>com.epam.course.actions.ShowUserInfoAction</actionClassName>
+
+    <inputType>de.hybris.platform.core.model.user.CustomerModel</inputType>
+    <outputType>java.lang.String</outputType>
+
+</action-definition>

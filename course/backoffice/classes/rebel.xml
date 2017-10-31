@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://www.zeroturnaround.com">
   <classpath>
-    <dir name="D:\tools\HYBRISCOMM6400P_3-70002841\hybris\bin\custom\course/backoffice/classes" />
+    <dir name="D:\Projects\h6cource\hybris\hybris\bin\custom\course/backoffice/classes" />
   </classpath>
 </application>
