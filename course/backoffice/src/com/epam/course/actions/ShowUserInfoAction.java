@@ -16,12 +16,6 @@ import de.hybris.platform.servicelayer.user.daos.UserDao;
 
 public class ShowUserInfoAction implements CockpitAction<CustomerModel, String> {
 
-    UserService userService;
-    UserDetailsService userDetailsService;
-    OrderService orderService;
-    UserDao userDao;
-
-    OrderDao orderDao;
 
     @Override
     public ActionResult<String> perform(ActionContext<CustomerModel> actionContext) {
