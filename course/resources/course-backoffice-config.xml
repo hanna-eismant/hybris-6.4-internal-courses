@@ -10,8 +10,8 @@
  license agreement you entered into with SAP.
 -->
 <config xmlns="http://www.hybris.com/cockpit/config"
-        xmlns:ea="http://www.hybris.com/cockpitng/component/editorArea"
-        xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+        xmlns:y="http://www.hybris.com/cockpit/config/hybris"
+        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
 
     <!-- course UI configuration should be provided here -->
 
@@ -26,6 +26,28 @@
                 <y:action action-id="com.epam.course.actions.ShowUserInfoAction" property="currentObject"/>
             </y:group>
         </y:actions>
+    </context>
+
+    <context type="Customer" component="editor-area">
+        <editorArea:editorArea name="">
+
+
+            <editorArea:essentials>
+                <editorArea:essentialSection name="hmc.essential">
+                    <editorArea:attribute qualifier="loyaltyCardNumber" position="4"/>
+                </editorArea:essentialSection>
+            </editorArea:essentials>
+
+
+            <editorArea:tab name="hmc.marketing" position="12">
+                <editorArea:section name="hmc.other">
+                    <editorArea:panel name="" colspan="2" rowspan="2">
+                        <editorArea:attribute qualifier="marketingComments"
+                                              editor="com.hybris.cockpitng.editor.localized(com.hybris.cockpitng.editor.wysiwyg)"/>
+                    </editorArea:panel>
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
     </context>
 
 </config>
