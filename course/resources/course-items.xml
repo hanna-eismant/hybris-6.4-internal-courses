@@ -42,5 +42,16 @@
             </attributes>
         </itemtype>
 
+        <itemtype code="LoyaltyNumberConstraint" extends="AttributeConstraint"
+                  autocreate="true" generate="true">
+            <description>Custom constraint for Customer Loyalty Number</description>
+            <attributes>
+                <attribute qualifier="annotation" type="java.lang.Class" redeclare="true">
+                    <modifiers write="false" initial="true" optional="false"/>
+                    <defaultvalue>com.epam.course.constraints.LoyaltyCardNumber.class</defaultvalue>
+                </attribute>
+            </attributes>
+        </itemtype>
+
     </itemtypes>
 </items>
