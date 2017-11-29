@@ -1,17 +1,23 @@
-package com.epam.course.com.epam.course.constraints;
+package com.epam.course.constraints;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class LoyaltyCardNumberValidator implements ConstraintValidator<LoyaltyCardNumber, String> {
 
+    private static final String LOYALTY_PATTERN = "[A-Z]{1}\\d{9}";
+    private Pattern pattern;
+
     @Override
     public void initialize(final LoyaltyCardNumber loyaltyCardNumber) {
-        // no initialization is needed
+        pattern = Pattern.compile(LOYALTY_PATTERN);
     }
 
     @Override
     public boolean isValid(final String value, final ConstraintValidatorContext constraintValidatorContext) {
-        return !(value == null || value.isEmpty() || value.length() != 10);
+        Matcher matcher = pattern.matcher(value);
+        return matcher.matches();
     }
 }

@@ -1,2 +1,10 @@
-INSERT_UPDATE LoyaltyNumberConstraint;id[unique=true];severity(code,itemtype(code));active;annotation;descriptor(enclosingType(code),qualifier);message[lang=en];value
-;AlbumSalesMustNotBeNegative;ERROR:Severity;true;javax.validation.constraints.Min;Band:albumSales;Albumverkäufe dürfen nicht negativ sein;Album sales must not be negative;0
+INSERT_UPDATE LoyaltyNumberConstraint;id[unique=true];severity(code,itemtype(code));active;annotation;type(code);descriptor(enclosingType(code),qualifier);target;qualifier;message[lang=en]
+;LoyaltyNumberTenSymbols;ERROR:Severity;true;com.epam.course.constraints.LoyaltyCardNumber;Customer;Customer:loyaltyCardNumber;de.hybris.platform.core.model.user.CustomerModel;loyaltyCardNumber;Custom validator Error Message
+
+"#% impex.enableCodeExecution(true);
+import de.hybris.platform.validation.services.ValidationService;
+import de.hybris.platform.core.Registry;
+
+ValidationService validationService = (ValidationService)Registry.getApplicationContext().getBean(""validationService"");
+validationService.reloadValidationEngine();
+"
