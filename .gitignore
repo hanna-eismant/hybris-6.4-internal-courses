@@ -1,0 +1,9 @@
+
+**/*.classpath
+**/*.project
+**/*.springBeans
+**/*.pmd
+**/.settings/
+**/classes/
+**/*.jar
+/course/gensrc/

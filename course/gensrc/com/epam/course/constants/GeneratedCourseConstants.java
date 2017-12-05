@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Nov 8, 2017 1:10:23 PM                      ---
+ * --- Generated at Nov 29, 2017 12:31:58 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.epam.course.constants;
@@ -14,6 +14,10 @@ package com.epam.course.constants;
 public class GeneratedCourseConstants
 {
 	public static final String EXTENSIONNAME = "course";
+	public static class TC
+	{
+		public static final String LOYALTYNUMBERCONSTRAINT = "LoyaltyNumberConstraint".intern();
+	}
 	public static class Attributes
 	{
 		public static class Customer

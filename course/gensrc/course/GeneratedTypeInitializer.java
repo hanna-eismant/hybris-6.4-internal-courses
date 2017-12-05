@@ -46,6 +46,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		// performCreateTypes
 	
 	
+		createItemType(
+			"LoyaltyNumberConstraint",
+			"AttributeConstraint",
+			com.epam.course.jalo.LoyaltyNumberConstraint.class,
+			null,
+			false,
+			null,
+			false
+		);
+	
 	}
 
 	/**
@@ -62,6 +72,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				single_createattr_Customer_loyaltyCardNumber();
 			
 				single_createattr_Customer_marketingComments();
+			
+				single_createattr_LoyaltyNumberConstraint_annotation();
 			
 
 	}
@@ -116,6 +128,18 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_LoyaltyNumberConstraint_annotation() throws JaloBusinessException
+	{
+		
+				redeclareAttribute(
+					"LoyaltyNumberConstraint", 
+					"annotation",
+					"java.lang.Class",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.INITIAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG
+				);
+			
+	}
+	
 
 
 	/**
@@ -140,6 +164,21 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_Customer_loyaltyCardNumber();
 		
 			single_setAttributeProperties_Customer_marketingComments();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				setItemTypeProperties(
+					"LoyaltyNumberConstraint",
+					false,
+					true,
+					true,
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_LoyaltyNumberConstraint_annotation();
 		
 	}
 
@@ -180,6 +219,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								false, 
 								null,
 								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_LoyaltyNumberConstraint_annotation() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"LoyaltyNumberConstraint", 
+								"annotation",
+								false, 
+								com.epam.course.constraints.LoyaltyCardNumber.class,
+								"com.epam.course.constraints.LoyaltyCardNumber.class",
 								null,
 								true,
 								true,

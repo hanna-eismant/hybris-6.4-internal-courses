@@ -1,19 +1,24 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Nov 8, 2017 1:10:23 PM                      ---
+ * --- Generated at Nov 29, 2017 12:31:58 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.epam.course.jalo;
 
 import com.epam.course.constants.CourseConstants;
+import com.epam.course.jalo.LoyaltyNumberConstraint;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
+import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloInvalidParameterException;
+import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.c2l.C2LManager;
 import de.hybris.platform.jalo.c2l.Language;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.type.ComposedType;
+import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.jalo.user.Customer;
 import de.hybris.platform.jalo.user.User;
 import java.util.Collections;
@@ -46,6 +51,32 @@ public abstract class GeneratedCourseManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	public LoyaltyNumberConstraint createLoyaltyNumberConstraint(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( CourseConstants.TC.LOYALTYNUMBERCONSTRAINT );
+			return (LoyaltyNumberConstraint)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating LoyaltyNumberConstraint : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public LoyaltyNumberConstraint createLoyaltyNumberConstraint(final Map attributeValues)
+	{
+		return createLoyaltyNumberConstraint( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override
