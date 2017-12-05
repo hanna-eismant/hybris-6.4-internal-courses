@@ -17,6 +17,10 @@ public class LoyaltyCardNumberValidator implements ConstraintValidator<LoyaltyCa
 
     @Override
     public boolean isValid(final String value, final ConstraintValidatorContext constraintValidatorContext) {
+        if (value == null || value.isEmpty()) {
+            return false;
+        }
+
         Matcher matcher = pattern.matcher(value);
         return matcher.matches();
     }
