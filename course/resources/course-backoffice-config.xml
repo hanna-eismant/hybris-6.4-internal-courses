@@ -50,4 +50,14 @@
         </editorArea:editorArea>
     </context>
 
+    <context component="perspective-chooser" principal="marketingmanagerrole">
+        <y:perspective-chooser xmlns:y="http://www.hybris.com/cockpitng/config/perspectiveChooser">
+            <y:authority name="marketingmanagerrole">
+                <y:perspective id="marketingPerspectiveId"/>
+            </y:authority>
+            <y:format id="marketingPerspectiveGroup" title-key="my.marketing.group.title" icon="/cng/images/perspective-group.png" />
+            <y:format id="marketingPerspectiveId" title-key="my.marketing.perspective.title" />
+        </y:perspective-chooser>
+    </context>
+
 </config>

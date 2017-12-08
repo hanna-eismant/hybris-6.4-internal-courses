@@ -1,0 +1,13 @@
+INSERT_UPDATE BackofficeRole;UID[unique=true];locname[lang=en];backOfficeLoginDisabled;authorities
+;orgemployeerole;Organization Employee Role;FALSE;orgemployeerole;
+
+INSERT_UPDATE PrincipalGroupRelation;source(uid)[unique=true];target(uid)[unique=true]
+;orgemployeegroup;orgemployeerole;
+
+
+
+INSERT_UPDATE BackofficeRole;UID[unique=true];locname[lang=en];backOfficeLoginDisabled;authorities
+;marketingmanagerrole;Backoffice Marketing Manager role;FALSE;marketingmanagerrole
+
+INSERT_UPDATE PrincipalGroupRelation;source(uid)[unique=true];target(uid)[unique=true]
+;restrictedMarketingManagerGroup;marketingmanagerrole

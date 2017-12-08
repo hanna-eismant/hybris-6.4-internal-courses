@@ -9,6 +9,12 @@
  license agreement you entered into with SAP.
 --><widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/widgets.xsd">
 
-    
+    <setting key="perspectiveDomain" type="String" value="marketingPerspectiveGroup"/>
+
+    <widget-extension widgetId="backofficeMainSlot">
+        <widget id="marketingPerspectiveId" widgetDefinitionId="com.hybris.cockpitng.borderlayout" slotId="perspectives"
+                title="my.marketing.perspective.title" template="false" access="marketingmanagerrole">
+        </widget>
+    </widget-extension>
 
 </widgets>
